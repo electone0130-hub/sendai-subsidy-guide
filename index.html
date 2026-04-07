@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仙台市 補助金・支援金ガイド｜パーソネルアシスト社労士事務所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1a2744;
+  --navy-light:#2a3d5e;
+  --teal:#0d7377;
+  --teal-light:#14a3a8;
+  --gold:#c9953c;
+  --gold-light:#e8b85a;
+  --cream:#faf8f4;
+  --warm-gray:#f0ede8;
+  --text:#2c2c2c;
+  --text-light:#6b6b6b;
+  --white:#ffffff;
+  --red:#c0392b;
+  --green:#27ae60;
+  --orange:#e67e22;
+  --border:#e0dcd5;
+  --shadow:0 2px 12px rgba(26,39,68,.08);
+  --shadow-lg:0 8px 32px rgba(26,39,68,.12);
+  --radius:10px;
+  --radius-sm:6px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 50%,var(--teal) 100%);
+  color:var(--white);
+  padding:3.5rem 1.5rem 3rem;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner{max-width:960px;margin:0 auto;position:relative;z-index:1}
+.hero-brand{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.8rem;letter-spacing:.15em;
+  color:rgba(255,255,255,.7);
+  margin-bottom:1.2rem;
+  text-transform:uppercase;
+}
+.hero-brand span{
+  display:inline-block;width:28px;height:2px;
+  background:var(--gold);border-radius:1px;
+}
+.hero h1{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:clamp(1.6rem,4vw,2.4rem);
+  font-weight:900;
+  line-height:1.35;
+  letter-spacing:.02em;
+  margin-bottom:.6rem;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--gold-light);
+}
+.hero-sub{
+  font-size:clamp(.85rem,2vw,1.05rem);
+  color:rgba(255,255,255,.75);
+  line-height:1.7;
+  max-width:640px;
+}
+.hero-meta{
+  margin-top:1.5rem;
+  display:flex;flex-wrap:wrap;gap:.6rem;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  padding:.3rem .85rem;
+  font-size:.75rem;
+  color:rgba(255,255,255,.85);
+  backdrop-filter:blur(4px);
+}
+.hero-tag svg{width:14px;height:14px;opacity:.7}
+
+/* ===== NAV TABS ===== */
+.nav-bar{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:100;
+}
+.nav-inner{
+  max-width:960px;margin:0 auto;
+  display:flex;gap:0;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-link{
+  display:block;padding:.9rem 1.2rem;
+  font-size:.82rem;font-weight:500;
+  color:var(--text-light);
+  text-decoration:none;
+  white-space:nowrap;
+  border-bottom:2.5px solid transparent;
+  transition:all .2s;
+}
+.nav-link:hover{color:var(--teal);border-color:var(--teal)}
+.nav-link .badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--teal);color:#fff;
+  font-size:.65rem;font-weight:700;
+  min-width:18px;height:18px;border-radius:9px;
+  padding:0 5px;margin-left:4px;
+  vertical-align:middle;
+}
+
+/* ===== MAIN ===== */
+.main{max-width:960px;margin:0 auto;padding:2rem 1.5rem 4rem}
+
+/* ===== SECTION ===== */
+.section{margin-bottom:3rem}
+.section-header{
+  display:flex;align-items:center;gap:.7rem;
+  margin-bottom:1.5rem;
+  padding-bottom:.8rem;
+  border-bottom:2px solid var(--navy);
+}
+.section-icon{
+  width:36px;height:36px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.section-icon.active{background:var(--teal);color:#fff}
+.section-icon.ended{background:var(--text-light);color:#fff}
+.section-icon.national{background:var(--gold);color:#fff}
+.section-icon svg{width:18px;height:18px}
+.section-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.2rem;font-weight:700;
+  color:var(--navy);
+  letter-spacing:.02em;
+}
+.section-count{
+  font-size:.75rem;color:var(--text-light);font-weight:400;
+  margin-left:auto;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.5rem;
+  margin-bottom:1rem;
+  box-shadow:var(--shadow);
+  transition:box-shadow .25s,transform .25s;
+}
+.card:hover{box-shadow:var(--shadow-lg);transform:translateY(-1px)}
+.card-top{
+  display:flex;align-items:flex-start;gap:.8rem;
+  margin-bottom:.8rem;
+}
+.status{
+  display:inline-flex;align-items:center;gap:.3rem;
+  font-size:.68rem;font-weight:700;
+  padding:.25rem .65rem;
+  border-radius:20px;
+  white-space:nowrap;
+  flex-shrink:0;
+  margin-top:.15rem;
+}
+.status.open{background:#e8f8f0;color:var(--green)}
+.status.closed{background:#fbeaea;color:var(--red)}
+.status.upcoming{background:#fef5e7;color:var(--orange)}
+.status::before{
+  content:'';display:block;width:6px;height:6px;
+  border-radius:50%;background:currentColor;
+}
+.card-title{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1rem;font-weight:700;
+  color:var(--navy);
+  line-height:1.5;
+}
+.card-desc{
+  font-size:.85rem;color:var(--text-light);
+  line-height:1.7;margin-bottom:1rem;
+}
+
+/* ===== DETAIL GRID ===== */
+.details{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:.6rem;
+  margin-bottom:1rem;
+}
+.detail-item{
+  background:var(--warm-gray);
+  border-radius:var(--radius-sm);
+  padding:.7rem .9rem;
+}
+.detail-label{
+  font-size:.68rem;font-weight:600;
+  color:var(--teal);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:.2rem;
+}
+.detail-value{
+  font-size:.82rem;font-weight:500;
+  color:var(--text);
+  line-height:1.6;
+}
+.detail-value strong{color:var(--navy);font-weight:700}
+
+/* ===== AMOUNT HIGHLIGHT ===== */
+.amount-box{
+  display:inline-flex;align-items:baseline;gap:.3rem;
+  background:linear-gradient(135deg,var(--navy),var(--teal));
+  color:#fff;
+  padding:.4rem 1rem;
+  border-radius:var(--radius-sm);
+  font-size:.82rem;font-weight:600;
+  margin-bottom:.8rem;
+}
+.amount-box .num{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:1.15rem;font-weight:900;
+}
+
+/* ===== TABLE (for tier info) ===== */
+.tier-table{
+  width:100%;border-collapse:collapse;
+  font-size:.8rem;margin:.6rem 0;
+}
+.tier-table th,.tier-table td{
+  padding:.5rem .7rem;
+  border:1px solid var(--border);
+  text-align:left;
+}
+.tier-table th{
+  background:var(--navy);color:#fff;
+  font-weight:600;font-size:.72rem;
+  letter-spacing:.04em;
+}
+.tier-table td{background:var(--white)}
+.tier-table tr:nth-child(even) td{background:var(--warm-gray)}
+
+/* ===== NATIONAL TABLE ===== */
+.national-grid{display:grid;gap:1rem}
+.national-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-left:4px solid var(--gold);
+  border-radius:var(--radius);
+  padding:1.2rem 1.5rem;
+  box-shadow:var(--shadow);
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:.8rem;
+  align-items:start;
+}
+.national-card .nc-body{min-width:0}
+.national-card .nc-title{
+  font-weight:700;font-size:.95rem;
+  color:var(--navy);margin-bottom:.3rem;
+}
+.national-card .nc-desc{
+  font-size:.8rem;color:var(--text-light);line-height:1.7;
+}
+.national-card .nc-boost{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:#fff;
+  padding:.5rem .8rem;
+  border-radius:var(--radius-sm);
+  font-size:.72rem;font-weight:700;
+  text-align:center;
+  white-space:nowrap;
+  line-height:1.4;
+  align-self:center;
+}
+.national-card .nc-boost .boost-amount{
+  font-size:.95rem;display:block;margin-top:.15rem;
+}
+
+/* ===== INFO BOXES ===== */
+.info-box{
+  border-radius:var(--radius);
+  padding:1.3rem 1.5rem;
+  margin:1.5rem 0;
+  line-height:1.8;
+}
+.info-box.tip{
+  background:#e8f8f0;
+  border:1px solid #b8e6cc;
+}
+.info-box.warn{
+  background:#fef5e7;
+  border:1px solid #f5d9a8;
+}
+.info-box.contact{
+  background:linear-gradient(135deg,var(--navy),var(--navy-light));
+  color:#fff;
+}
+.info-box-title{
+  font-weight:700;font-size:.9rem;
+  margin-bottom:.4rem;
+  display:flex;align-items:center;gap:.4rem;
+}
+.info-box-title svg{width:16px;height:16px;flex-shrink:0}
+.info-box p{font-size:.84rem}
+.info-box.contact a{color:var(--gold-light);text-decoration:none;font-weight:600}
+.info-box.contact a:hover{text-decoration:underline}
+
+/* ===== FLOW CHART ===== */
+.flow{
+  display:flex;align-items:center;gap:0;
+  overflow-x:auto;padding:.8rem 0;
+  -webkit-overflow-scrolling:touch;
+}
+.flow-step{
+  display:flex;flex-direction:column;align-items:center;
+  min-width:120px;text-align:center;
+}
+.flow-num{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--teal);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;font-weight:700;
+  margin-bottom:.4rem;
+}
+.flow-label{font-size:.72rem;font-weight:500;color:var(--text);line-height:1.4}
+.flow-arrow{
+  font-size:1.2rem;color:var(--border);
+  flex-shrink:0;margin:0 .2rem;
+  padding-bottom:1.2rem;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:var(--navy);color:rgba(255,255,255,.7);
+  padding:2rem 1.5rem;
+  text-align:center;
+  font-size:.75rem;
+  line-height:1.8;
+}
+.footer strong{color:var(--gold-light);font-weight:600}
+.footer a{color:var(--gold-light);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:640px){
+  .hero{padding:2.5rem 1.2rem 2rem}
+  .main{padding:1.5rem 1rem 3rem}
+  .card{padding:1.2rem}
+  .details{grid-template-columns:1fr}
+  .national-card{grid-template-columns:1fr;gap:.6rem}
+  .national-card .nc-boost{justify-self:start}
+  .nav-link{padding:.75rem .9rem;font-size:.78rem}
+  .section-header{flex-wrap:wrap}
+  .section-count{margin-left:0;width:100%}
+}
+
+/* ===== PRINT ===== */
+@media print{
+  .nav-bar{display:none}
+  .hero{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .card{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-brand">
+      <span></span>パーソネルアシスト社労士事務所
+    </div>
+    <h1>仙台市の<em>補助金・支援金</em><br>完全ガイド</h1>
+    <p class="hero-sub">
+      中小企業・個人事業主が活用できる仙台市の補助金・支援金制度を網羅的にご紹介。<br>国の補助金との併用で、最大限の支援を受けるための実務ポイントも解説します。
+    </p>
+    <div class="hero-meta">
+      <span class="hero-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        2026年4月時点
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        仙台市
+      </span>
+      <span class="hero-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        中小企業・個人事業主向け
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#active" class="nav-link">受付中の制度<span class="badge">10</span></a>
+    <a href="#ended" class="nav-link">再開見込み制度</a>
+    <a href="#national" class="nav-link">国の補助金＋上乗せ</a>
+    <a href="#flow" class="nav-link">申請のポイント</a>
+    <a href="#contact" class="nav-link">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+<!-- ==================== SECTION: 受付中 ==================== -->
+<section class="section" id="active">
+  <div class="section-header">
+    <div class="section-icon active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2 class="section-title">現在申請可能な制度</h2>
+    <span class="section-count">10制度</span>
+  </div>
+
+  <!-- Card 1 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">仙台市生産性向上・賃金引上げ応援金</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">国の「業務改善助成金」の支給決定を受けた事業者に、仙台市が経費の一部を上乗せ支給する制度。物価高克服・賃上げ応援パッケージの一環です。</p>
+    <div class="amount-box">上限 <span class="num">60</span>万円（補助対象経費の1/10）</div>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に本店・主たる事務所を置く<strong>中小企業者・個人事業主</strong></div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">主な要件</div>
+        <div class="detail-value">R7.4.1以降の業務改善助成金支給決定通知、市税滞納なし</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">受付期間</div>
+        <div class="detail-value"><strong>〜令和9年3月31日</strong>（予算到達時終了）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">経済局中小企業支援課 経営支援係<br>TEL: 022-214-8772</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card: 賃上げドライブ補助金 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">賃上げドライブ補助金（仙台市設備投資促進補助金）</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">正社員の平均賃金を3%以上引き上げた事業者に対し、設備投資経費の一部を補助する制度。賃上げ率に応じて補助率・上限が段階的に設定されている。</p>
+    <table class="tier-table">
+      <thead><tr><th>平均賃上げ率</th><th>補助上限額</th><th>補助率</th></tr></thead>
+      <tbody>
+        <tr><td>3%以上5%未満</td><td><strong>100万円</strong></td><td>2/3</td></tr>
+        <tr><td>5%以上</td><td><strong>300万円</strong></td><td>3/4</td></tr>
+      </tbody>
+    </table>
+    <div class="details" style="margin-top:.8rem">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に本店等を置く<strong>中小企業者・個人事業主・会社以外の法人</strong>（正社員数6人以上）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">対象経費</div>
+        <div class="detail-value">機械装置等購入費、システム・ソフトウェア導入費、造作・改修費、人材育成費、コンサルティング費 等</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">受付期間</div>
+        <div class="detail-value"><strong>〜令和9年3月31日</strong>（予算到達時終了）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">経済局中小企業支援課<br>TEL: 022-214-8772</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card 2 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">仙台生産性ブースト補助金</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">国の「IT導入補助金」「デジタル化・AI導入補助金」「省力化投資補助金」の交付決定を受けた市内事業者に、仙台市が自己負担分を上乗せ補助。旧制度が令和7年9月に新制度として再開。</p>
+    <div class="amount-box">上限 <span class="num">50</span>万円</div>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に本店等を置く<strong>中小企業者・個人事業主・その他法人</strong></div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">補助額の計算</div>
+        <div class="detail-value">自己負担25万円以下→全額、25万円超→25万円＋超過分の1/2</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">受付期間</div>
+        <div class="detail-value"><strong>〜令和9年3月31日</strong>（予算到達時終了）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">申請方法</div>
+        <div class="detail-value">メール申請（boost@city.sendai.jp）<br>TEL: 022-214-1003</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card: 業務効率化支援事業補助金 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">仙台市業務効率化支援事業補助金（業務効率化サポート枠）</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">令和8年度の新制度。デジタルツール等導入による業務効率化に取り組む事業者に、専門家の伴走コンサルティングと経費補助を提供。賃上げ実施事業者は補助率が優遇される。子育て両立の取組みには採択加点あり。<br><small>※令和8年4月中旬以降に「デジタル導入補助枠」（上限200万円、補助率1/2〜2/3、採択10件程度）の追加募集も予定。</small></p>
+    <div class="amount-box">上限 <span class="num">50</span>万円（補助率 1/2、賃上げ優遇時 2/3）</div>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value"><strong>雇用のある中小企業者・個人事業者</strong>（従業員1名以上、創業後1期以上）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">賃上げ優遇措置</div>
+        <div class="detail-value">R6→R7で従業員1人あたり平均労働保険料が<strong>3%以上増</strong>の場合、補助率2/3に引上げ</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">申請スケジュール</div>
+        <div class="detail-value">事前相談予約：〜<strong>5月13日</strong><br>申請書提出：〜<strong>5月22日</strong> 13時<br>採択：6月上旬予定｜採択50件程度</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">申請方法</div>
+        <div class="detail-value">事前相談（必須1回以上）→メール申請<br>仙台市産業振興事業団<br>TEL: 022-724-1122</div>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--text-light)">※旧制度「仙台市地域企業業務効率化サポート補助金」の後継制度として再編されたものです。</div>
+  </article>
+
+  <!-- Card 3 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">経営環境変化対応資金連動型給付金</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">日本政策金融公庫の「経営環境変化対応資金」を利用した事業者に、最長5年分の利息額相当分を給付。物価高騰等による資金繰りを直接的に支援する制度です。</p>
+    <div class="amount-box">上限 <span class="num">20</span>〜<span class="num">50</span>万円（借入額に応じ段階的）</div>
+    <table class="tier-table">
+      <thead><tr><th>借入額</th><th>給付上限</th></tr></thead>
+      <tbody>
+        <tr><td>500万円以内</td><td>20万円</td></tr>
+        <tr><td>500万円超〜1,000万円</td><td>30万円</td></tr>
+        <tr><td>1,000万円超〜1,500万円</td><td>40万円</td></tr>
+        <tr><td>1,500万円超</td><td>50万円</td></tr>
+      </tbody>
+    </table>
+    <div class="details" style="margin-top:.8rem">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に本店・主たる事業所を有する<strong>中小企業者・個人事業主</strong></div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">主な要件</div>
+        <div class="detail-value">R7.4.1〜R9.3.31に経営環境変化対応資金の融資実行、市税滞納なし</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">受付期間</div>
+        <div class="detail-value"><strong>予算上限到達まで随時受付</strong></div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">申請方法</div>
+        <div class="detail-value">メール申請<br>TEL: 022-214-1003</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card 4 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">仙台市男性育休取得奨励金</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">男性従業員が連続7日間以上の育児休業を取得した市内中小企業等に奨励金を支給。1事業者1回限り。</p>
+    <div class="amount-box">最大 <span class="num">20</span>万円</div>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に本店等を有し、常時雇用<strong>300人以下</strong>の法人・個人事業者</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">支給額</div>
+        <div class="detail-value">
+          連続7日〜28日未満：<strong>10万円</strong><br>
+          連続28日以上：<strong>20万円</strong><br>
+          ステップアップコース（国助成金受給者）：<strong>20万円</strong>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">受付期間</div>
+        <div class="detail-value"><strong>〜令和8年3月31日</strong>（予算到達時終了）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">こども若者局総務課 企画調整係<br>TEL: 022-214-8790</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card 5 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">仙台市海外販路開拓チャレンジ支援助成金</div>
+      </div>
+      <span class="status open">受付中</span>
+    </div>
+    <p class="card-desc">海外市場開拓に取り組む市内中小企業を支援。FS調査、海外EC構築、国際見本市出展、輸出事業など幅広い経費が対象。令和8年度は2026年4月から受付開始。</p>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に主たる事業所を有する<strong>中小企業者</strong>（自社製品対象。商社等は除外）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">対象事業</div>
+        <div class="detail-value">①事前準備・FS調査 ②海外EC事業 ③国際見本市出展 ④輸出事業</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">重点分野・地域</div>
+        <div class="detail-value">健康福祉・工芸品・食品産業、タイ・台湾</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">受付期間</div>
+        <div class="detail-value"><strong>〜令和9年3月1日</strong>（予算執行状況により終了の場合あり）</div>
+      </div>
+    </div>
+    <div style="font-size:.78rem;color:var(--text-light)">担当：経済局中小企業支援課 販路開拓支援係 TEL: 022-214-1005</div>
+  </article>
+
+  <!-- Card 6 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">企業立地促進助成金（令和8年4月リニューアル）</div>
+      </div>
+      <span class="status open">常時受付</span>
+    </div>
+    <p class="card-desc">仙台市に新規立地する企業向け助成金。令和8年4月1日に「新」制度として大幅リニューアル。製造業、IT、研究開発、本社機能移転、半導体関連など10業種が対象。設備更新は市内中小事業者限定。</p>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">助成額（建物取得型）</div>
+        <div class="detail-value">固定資産税課税標準額の<strong>5%〜32%</strong></div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">助成額（建物賃借型）</div>
+        <div class="detail-value">月額賃借料の<strong>3〜36か月分</strong></div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">主な要件</div>
+        <div class="detail-value">事前協議書の提出必須、操業継続義務（取得型10年/賃借型4〜8年）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">経済局産業集積推進課<br>TEL: 022-214-8276 / 022-214-8245</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card 7 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">広域集客型産業立地促進助成金</div>
+      </div>
+      <span class="status open">随時受付</span>
+    </div>
+    <p class="card-desc">年間10万人以上の来場者を見込む広域集客型施設の立地に対し、固定資産税相当額を最大5年分助成。投下固定資産3億円以上の大型案件向け。</p>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">助成額</div>
+        <div class="detail-value">最初の3年分の固定資産税等相当額（復興特区加算で最大5年）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">文化観光局交流企画課 TEL: 022-214-1261</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Card 8 -->
+  <article class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-title">T-Biz入居企業等補助金</div>
+      </div>
+      <span class="status open">常時受付</span>
+    </div>
+    <p class="card-desc">東北大学連携ビジネスインキュベータ（T-Biz）に入居する起業家・中小企業への賃料補助。大学の研究シーズを活用した事業化に特化。</p>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">補助額</div>
+        <div class="detail-value">1年目:500円/㎡、2〜3年目:400円/㎡、4〜5年目:300円/㎡（<strong>最長5年</strong>）</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">経済局スタートアップ支援課 TEL: 022-214-8278</div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ==================== SECTION: 受付終了 ==================== -->
+<section class="section" id="ended">
+  <div class="section-header">
+    <div class="section-icon ended">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </div>
+    <h2 class="section-title">受付終了（再開見込みの制度）</h2>
+  </div>
+
+  <div class="info-box warn">
+    <div class="info-box-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      再開時期について
+    </div>
+    <p>以下の制度は2026年4月時点で受付終了ですが、毎年度または隔年で募集される性質のため、令和8年度中に再開される可能性があります。最新情報は各担当課または「オーエン」（TEL: 022-724-1122）にご確認ください。</p>
+  </div>
+
+  <article class="card">
+    <div class="card-top">
+      <div><div class="card-title">仙台市地域企業スケールアップ補助金</div></div>
+      <span class="status upcoming">再開見込</span>
+    </div>
+    <p class="card-desc">新事業展開・生産性向上・販路開拓・ブランディング等を支援。補助率1/2、下限200万円。「オーエン」での事前相談が必須要件。個人事業主は対象外。</p>
+    <div class="amount-box">上限 <span class="num">300</span>万円（補助率 1/2）</div>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">対象者</div>
+        <div class="detail-value">市内に本店を有する<strong>法人企業</strong>（資本金10億円未満）※個人事業主は対象外</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">令和7年度実績</div>
+        <div class="detail-value">第1回（4〜7月）・第2回（8〜9月）の計2回募集、計13件程度採択</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <div><div class="card-title">仙台市地域企業業務効率化サポート補助金（令和7年度）</div></div>
+      <span class="status closed">後継制度へ移行</span>
+    </div>
+    <p class="card-desc">令和7年度のデジタル化枠（上限50万円）・設備等導入枠（上限200万円）の2枠構成制度は終了し、令和8年度は<strong>「仙台市業務効率化支援事業補助金」</strong>に再編されています。上記「受付中の制度」をご確認ください。</p>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <div><div class="card-title">情報系資格取得支援補助金</div></div>
+      <span class="status upcoming">再開見込</span>
+    </div>
+    <p class="card-desc">従業員のITパスポート試験合格に要する経費（対策講座・受験料・資格手当）を補助率100%で全額補助。中小企業のほか社福法人・医療法人・NPO等も対象。</p>
+    <div class="amount-box">合格者1人 最大 <span class="num">27,500</span>円／1社 上限 <span class="num">55</span>万円</div>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">経済局商業・人材支援課 TEL: 022-214-1007</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <div><div class="card-title">ものづくり・商業・サービス生産性向上促進補助金（市独自）</div></div>
+      <span class="status closed">終了</span>
+    </div>
+    <p class="card-desc">市内ものづくり企業の生産性向上を支援する市独自の補助金。国のものづくり補助金とは別制度。</p>
+  </article>
+
+  <article class="card">
+    <div class="card-top">
+      <div><div class="card-title">事業用太陽光パネル等の共同購入事業</div></div>
+      <span class="status upcoming">再開見込</span>
+    </div>
+    <p class="card-desc">補助金ではなく、一括発注により市場価格より27〜39%低い価格で10kW以上の太陽光パネルを導入できるスキーム。</p>
+    <div class="details">
+      <div class="detail-item">
+        <div class="detail-label">問い合わせ</div>
+        <div class="detail-value">環境局脱炭素経営推進課 TEL: 022-214-8057</div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ==================== SECTION: 国の補助金 ==================== -->
+<section class="section" id="national">
+  <div class="section-header">
+    <div class="section-icon national">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+    </div>
+    <h2 class="section-title">国の補助金＋仙台市の上乗せ支援</h2>
+  </div>
+
+  <div class="info-box tip">
+    <div class="info-box-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      活用のポイント：二段構えのアプローチ
+    </div>
+    <p>まず国の補助金の交付決定を獲得し、その上で仙台市独自の上乗せ補助金を申請するのが最も効果的な活用法です。例えば、業務改善助成金＋賃金引上げ応援金で最大60万円、IT導入補助金＋生産性ブースト補助金で最大50万円が追加で受けられます。</p>
+  </div>
+
+  <div class="national-grid">
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">小規模事業者持続化補助金</div>
+        <div class="nc-desc">販路開拓の取組みを支援。上限50万〜250万円。仙台市は獲得セミナー・事例集12件以上で申請を支援。</div>
+      </div>
+      <div class="nc-boost">セミナー<br>事例集</div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">ものづくり補助金</div>
+        <div class="nc-desc">設備投資・試作品開発を支援。仙台市は活用事例集とオーエン相談で申請を支援。</div>
+      </div>
+      <div class="nc-boost">事例集<br>オーエン</div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">事業再構築補助金</div>
+        <div class="nc-desc">新分野展開・業態転換を支援。仙台市は獲得セミナー動画・事例集12件以上を提供。</div>
+      </div>
+      <div class="nc-boost">セミナー<br>事例集</div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">IT導入補助金</div>
+        <div class="nc-desc">ITツール導入費用を補助。仙台市の上乗せ制度との併用で効果最大化。</div>
+      </div>
+      <div class="nc-boost">上乗せ<br><span class="boost-amount">最大50万円</span></div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">中小企業省力化投資補助金</div>
+        <div class="nc-desc">IoT・ロボット等の導入を支援。仙台生産性ブースト補助金の対象。</div>
+      </div>
+      <div class="nc-boost">上乗せ<br><span class="boost-amount">最大50万円</span></div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">業務改善助成金</div>
+        <div class="nc-desc">設備投資＋賃金引上げを支援。仙台市の応援金との併用で効果最大化。</div>
+      </div>
+      <div class="nc-boost">上乗せ<br><span class="boost-amount">最大60万円</span></div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">人材開発支援助成金</div>
+        <div class="nc-desc">従業員の職業訓練を支援。仙台市は活用事例集とオーエン相談で申請を支援。</div>
+      </div>
+      <div class="nc-boost">事例集<br>オーエン</div>
+    </div>
+    <div class="national-card">
+      <div class="nc-body">
+        <div class="nc-title">事業承継・引継ぎ補助金</div>
+        <div class="nc-desc">事業承継時の経営革新を支援。上限100万〜800万円。</div>
+      </div>
+      <div class="nc-boost">事例集<br>オーエン</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION: 申請フロー ==================== -->
+<section class="section" id="flow">
+  <div class="section-header">
+    <div class="section-icon active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </div>
+    <h2 class="section-title">申請のポイント</h2>
+  </div>
+
+  <h3 style="font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.8rem">一般的な申請フロー</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="flow-num">1</div><div class="flow-label">オーエンへ<br>事前相談</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><div class="flow-num">2</div><div class="flow-label">申請書類<br>準備</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><div class="flow-num">3</div><div class="flow-label">申請提出<br>（メール/郵送）</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><div class="flow-num">4</div><div class="flow-label">審査<br>（書類/面接）</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><div class="flow-num">5</div><div class="flow-label">交付決定<br>通知</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><div class="flow-num">6</div><div class="flow-label">事業実施<br>＆実績報告</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><div class="flow-num">7</div><div class="flow-label">補助金<br>受領</div></div>
+  </div>
+
+  <div class="info-box tip" style="margin-top:1.5rem">
+    <div class="info-box-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      全制度に共通する重要事項
+    </div>
+    <p>
+      <strong>① 事前相談は必須</strong>：スケールアップ補助金、業務効率化サポート補助金など多くの制度で、中小企業応援窓口「オーエン」での事前相談が採択の必須条件です。<br>
+      <strong>② 市税の滞納なし</strong>：仙台市税の滞納がないことは全制度に共通の要件です。<br>
+      <strong>③ 早期申請を推奨</strong>：人気制度は年度途中で予算上限に達し早期終了する場合があります。<br>
+      <strong>④ 国の補助金との併用</strong>：仙台市独自の上乗せ補助を最大限活用するには、まず国の補助金を獲得してください。
+    </p>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="contact">
+  <div class="info-box contact">
+    <div class="info-box-title" style="font-size:1.05rem;margin-bottom:.6rem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      補助金のご相談はパーソネルアシストへ
+    </div>
+    <p style="font-size:.88rem;line-height:2">
+      補助金・支援金の申請手続きでお困りの際は、当事務所までお気軽にご相談ください。<br>
+      申請書類の作成支援、事前相談の同行、国の補助金との併用戦略のご提案まで、ワンストップでサポートいたします。
+    </p>
+    <p style="margin-top:.8rem;font-size:.88rem;line-height:2">
+      <strong>仙台市中小企業応援窓口「オーエン」</strong><br>
+      TEL: <a href="tel:022-724-1122">022-724-1122</a>（平日 9:00〜17:00）
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p><strong>パーソネルアシスト社労士事務所</strong></p>
+  <p>本ページの情報は2026年4月時点の仙台市公式サイトに基づいています。<br>制度内容は変更される場合がありますので、申請前に必ず最新情報をご確認ください。</p>
+  <p style="margin-top:.6rem">出典：<a href="https://www.city.sendai.jp/kikakushien/jigyosha/kezai/hojokin/index.html" target="_blank" rel="noopener">仙台市「支援金・補助金を獲得したい」</a></p>
+</footer>
+
+</body>
+</html>
