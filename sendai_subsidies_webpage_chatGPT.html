@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>仙台市の補助金・支援金ガイド</title>
+  <meta name="description" content="仙台市公式サイト掲載の補助金・支援金を、事業者向けに見やすく整理した紹介ページです。">
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-2: #f8fbff;
+      --text: #1f2937;
+      --muted: #5b6678;
+      --line: #d9e3f0;
+      --primary: #0f5bd3;
+      --primary-dark: #0a3f96;
+      --accent: #00a3a3;
+      --warning: #b45309;
+      --danger: #b91c1c;
+      --shadow: 0 18px 50px rgba(15, 35, 95, 0.08);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #edf4ff 0%, var(--bg) 220px, var(--bg) 100%);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    header.hero {
+      padding: 28px 0 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-panel {
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.24), transparent 30%), linear-gradient(135deg, #0f5bd3, #123b87 70%);
+      color: white;
+      border-radius: 28px;
+      padding: 40px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+    h1 { font-size: clamp(28px, 5vw, 46px); line-height: 1.15; margin: 16px 0 14px; }
+    .hero-copy { max-width: 760px; color: rgba(255,255,255,0.92); font-size: 16px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 16px;
+      backdrop-filter: blur(8px);
+    }
+    .stat strong { display: block; font-size: 28px; line-height: 1.1; margin-bottom: 4px; }
+    .stat span { font-size: 13px; color: rgba(255,255,255,0.82); }
+
+    .notice-bar {
+      margin-top: 18px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(244,247,251,0.85);
+      border-bottom: 1px solid rgba(217,227,240,0.9);
+    }
+    .toolbar-inner {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 0;
+    }
+    .search-wrap { flex: 1 1 320px; position: relative; }
+    .search-wrap input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-size: 15px;
+      outline: none;
+      background: white;
+    }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+    .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+    .section-block { padding: 28px 0; }
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .panel h2 { margin: 0 0 10px; font-size: 24px; }
+    .panel p.lead { margin: 0 0 18px; color: var(--muted); }
+    .flow { display: grid; gap: 14px; }
+    .flow-step { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; }
+    .flow-step .num {
+      width: 52px; height: 52px; border-radius: 16px; background: #e7f0ff; color: var(--primary-dark);
+      display: grid; place-items: center; font-weight: 800; font-size: 18px;
+    }
+    .flow-step h3 { margin: 0 0 4px; font-size: 17px; }
+    .flow-step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .nav-card { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .nav-card a {
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      color: var(--primary-dark);
+      transition: 0.18s ease;
+    }
+    .nav-card a:hover { transform: translateY(-1px); background: #eef5ff; }
+
+    .section-title { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 8px 0 18px; }
+    .section-title h2 { margin: 0; font-size: 28px; }
+    .section-title p { margin: 0; color: var(--muted); }
+
+    .category-section { padding: 18px 0 12px; }
+    .section-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .section-head h2 { margin: 0; font-size: 24px; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      transition: 0.18s ease;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .card-top h3 { margin: 12px 0 8px; font-size: 19px; line-height: 1.35; }
+    .summary { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+    .meta { margin: 0 0 14px; display: grid; gap: 8px; }
+    .meta div { background: #f8fafc; border-radius: 12px; padding: 10px 12px; }
+    .meta dt { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+    .meta dd { margin: 0; font-size: 14px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge { display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 700; }
+    .badge-type.municipal { background: #dbeafe; color: #1d4ed8; }
+    .badge-type.national { background: #ede9fe; color: #6d28d9; }
+    .badge-status.note { background: #ecfeff; color: #0f766e; }
+    .badge-status.ended { background: #fee2e2; color: #b91c1c; }
+    .keywords-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+    .keyword { background: #f1f5f9; color: #475569; border-radius: 999px; padding: 6px 10px; font-size: 12px; }
+    .actions { margin-top: 16px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      padding: 13px 16px;
+      border-radius: 14px;
+      font-weight: 700;
+    }
+    .button:hover { background: var(--primary-dark); }
+
+    .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .related-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
+    .related-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .related-card p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+    .related-card a { color: var(--primary); font-weight: 700; }
+
+    footer { padding: 24px 0 42px; color: var(--muted); }
+    .footer-panel { background: #0f172a; color: #cbd5e1; border-radius: 24px; padding: 22px; }
+    .footer-panel h2 { margin: 0 0 10px; color: white; font-size: 22px; }
+    .footer-panel p { margin: 0 0 8px; }
+    .fine { font-size: 13px; color: #94a3b8; }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 1080px) {
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 820px) {
+      .quick-grid { grid-template-columns: 1fr; }
+      .nav-card { grid-template-columns: 1fr 1fr; }
+      .hero-panel { padding: 30px 22px; }
+    }
+
+    @media (max-width: 640px) {
+      .card-grid, .related-grid, .nav-card { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .toolbar-inner { width: min(calc(100% - 24px), var(--max)); }
+      .container { width: min(calc(100% - 24px), var(--max)); }
+      .section-title { flex-direction: column; align-items: start; }
+      .section-head { flex-direction: column; align-items: start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-panel">
+        <span class="eyebrow">仙台市公式掲載制度を整理した事業者向けガイド</span>
+        <h1>仙台市の補助金・支援金を<br>目的別に見やすく整理しました</h1>
+        <p class="hero-copy">仙台市公式サイト「支援金・補助金を獲得したい」に掲載されている制度を、事業者が探しやすいようにカテゴリ別で再構成した紹介ページです。元ページで重複掲載されている制度は整理し、終了済み情報は参考扱いで区別しています。</p>
+        <div class="stats">
+          <div class="stat"><strong>28</strong><span>掲載制度数（重複整理後）</span></div>
+          <div class="stat"><strong>20</strong><span>仙台市制度</span></div>
+          <div class="stat"><strong>8</strong><span>国補助金の案内</span></div>
+          <div class="stat"><strong>4</strong><span>終了・参考情報</span></div>
+        </div>
+      </div>
+      <div class="notice-bar">公募期間、受付状況、補助率、対象経費、必要書類は制度ごとに異なります。実際の申請前には必ず各制度の公式ページで最新情報をご確認ください。</div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="制度名、目的、キーワードで検索 例：賃上げ / IT / 海外 / 事業承継">
+      </div>
+      <div class="filters">
+        <button class="chip active" data-filter="all">すべて</button>
+        <button class="chip" data-filter="仙台市">仙台市制度</button>
+        <button class="chip" data-filter="国">国補助金の案内</button>
+        <button class="chip" data-filter="終了">終了・参考情報</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section-block">
+      <div class="container quick-grid">
+        <section class="panel">
+          <h2>まずはこの順番で確認</h2>
+          <p class="lead">制度探しで迷う典型パターンを減らすため、先に絞り込みの順番を置いています。役所ページを上から読むより、だいぶ人間的です。</p>
+          <div class="flow">
+            <div class="flow-step">
+              <div class="num">1</div>
+              <div>
+                <h3>目的を決める</h3>
+                <p>海外展開、新事業、設備投資、賃上げ、人材育成、デジタル化、事業承継など、まず目的で絞り込みます。</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="num">2</div>
+              <div>
+                <h3>制度区分を見る</h3>
+                <p>仙台市独自制度なのか、国補助金の案内ページなのかを確認します。申請窓口や実務フローが変わります。</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="num">3</div>
+              <div>
+                <h3>受付状況を確認する</h3>
+                <p>「令和◯年度」「追加募集」「終了」などの表示を見て、今動ける案件かを判断します。</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="num">4</div>
+              <div>
+                <h3>詳細ページで要件確認</h3>
+                <p>補助率、上限額、対象経費、事前相談の有無、申請期限、実績報告まで必ず個別ページで確認します。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <h2>カテゴリから探す</h2>
+          <p class="lead">相談内容に近いテーマから飛べるようにしています。</p>
+          <div class="nav-card">
+            <a href="#海外展開">海外展開</a><a href="#立地・拠点整備">立地・拠点整備</a><a href="#創業・インキュベーション">創業・インキュベーション</a><a href="#農林水産・6次化">農林水産・6次化</a><a href="#国補助金の活用支援">国補助金の活用支援</a><a href="#新事業・事業変革">新事業・事業変革</a><a href="#設備投資・省力化">設備投資・省力化</a><a href="#賃上げ・雇用">賃上げ・雇用</a><a href="#人材育成">人材育成</a><a href="#販路開拓">販路開拓</a><a href="#デジタル化・IT">デジタル化・IT</a><a href="#事業承継">事業承継</a><a href="#財務・資金繰り">財務・資金繰り</a><a href="#GX・脱炭素">GX・脱炭素</a><a href="#経営環境対応">経営環境対応</a><a href="#人事・両立支援">人事・両立支援</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>制度一覧</h2>
+            <p>検索ボックスとフィルターで絞り込みできます。</p>
+          </div>
+          <p id="resultCount">28件を表示中</p>
+        </div>
+        
+      <section id="海外展開" class="category-section">
+        <div class="section-head">
+          <h2>海外展開</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="令和8年度" data-search="仙台市海外販路開拓チャレンジ支援助成金 海外市場への展開、越境EC、国際見本市出展、輸出対応などを後押しする制度。 海外販路 越境EC 見本市 輸出 海外展開 海外販路を開拓したい市内中小企業向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">令和8年度</span>
+            </div>
+            <h3>仙台市海外販路開拓チャレンジ支援助成金</h3>
+          </div>
+          <p class="summary">海外市場への展開、越境EC、国際見本市出展、輸出対応などを後押しする制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>海外販路を開拓したい市内中小企業向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>海外展開</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">海外販路</span><span class="keyword">越境EC</span><span class="keyword">見本市</span><span class="keyword">輸出</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/jigyosuishin/jigyosha/kezai/jigyosho/shien/challenge.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="立地・拠点整備" class="category-section">
+        <div class="section-head">
+          <h2>立地・拠点整備</h2>
+          <p>2制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="企業立地促進助成金 工場や事業所の新設・増設など、企業立地を促進するための助成制度。 立地 新設 増設 設備 立地・拠点整備 市内への立地・拡張を検討する事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>企業立地促進助成金</h3>
+          </div>
+          <p class="summary">工場や事業所の新設・増設など、企業立地を促進するための助成制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>市内への立地・拡張を検討する事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>立地・拠点整備</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">立地</span><span class="keyword">新設</span><span class="keyword">増設</span><span class="keyword">設備</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/toshigata/zyoseikin.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="広域集客型産業立地促進助成金 広域から人を呼び込む施設整備や立地を促進するための助成制度。 集客 観光 立地 施設 立地・拠点整備 集客施設・観光関連の事業を行う事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>広域集客型産業立地促進助成金</h3>
+          </div>
+          <p class="summary">広域から人を呼び込む施設整備や立地を促進するための助成制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>集客施設・観光関連の事業を行う事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>立地・拠点整備</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">集客</span><span class="keyword">観光</span><span class="keyword">立地</span><span class="keyword">施設</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/shomu/kouikisyukyaku/kouikisyukyaku.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="創業・インキュベーション" class="category-section">
+        <div class="section-head">
+          <h2>創業・インキュベーション</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="東北大学連携ビジネスインキュベータ（T-Biz）入居者への賃料補助 T-Biz入居者の賃料負担を軽減し、研究開発型・スタートアップの育成を支援。 スタートアップ インキュベータ 賃料 T-Biz 創業・インキュベーション T-Bizへの入居企業・入居予定企業向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>東北大学連携ビジネスインキュベータ（T-Biz）入居者への賃料補助</h3>
+          </div>
+          <p class="summary">T-Biz入居者の賃料負担を軽減し、研究開発型・スタートアップの育成を支援。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>T-Bizへの入居企業・入居予定企業向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>創業・インキュベーション</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">スタートアップ</span><span class="keyword">インキュベータ</span><span class="keyword">賃料</span><span class="keyword">T-Biz</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/startup-sogyo/jigyosha/kezai/sangaku/minkan/t-biz.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="農林水産・6次化" class="category-section">
+        <div class="section-head">
+          <h2>農林水産・6次化</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="仙台市6次産業化等チャレンジ支援事業補助金 農林水産物の高付加価値化や農商工連携などの取り組みを支援。 6次産業化 農商工連携 加工 販路 農林水産・6次化 農林水産事業者や連携事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>仙台市6次産業化等チャレンジ支援事業補助金</h3>
+          </div>
+          <p class="summary">農林水産物の高付加価値化や農商工連携などの取り組みを支援。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>農林水産事業者や連携事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>農林水産・6次化</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">6次産業化</span><span class="keyword">農商工連携</span><span class="keyword">加工</span><span class="keyword">販路</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/noshoku/kurashi/shizen/norinsuisan/noushoku/rokujika.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="国補助金の活用支援" class="category-section">
+        <div class="section-head">
+          <h2>国補助金の活用支援</h2>
+          <p>3制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="仙台市生産性向上・賃金引上げ応援金 国の補助制度等の活用とあわせて、生産性向上や賃上げに取り組む事業者を後押しする応援金。 賃上げ 生産性 応援金 国補助金の活用支援 生産性向上・賃上げを進めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>仙台市生産性向上・賃金引上げ応援金</h3>
+          </div>
+          <p class="summary">国の補助制度等の活用とあわせて、生産性向上や賃上げに取り組む事業者を後押しする応援金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>生産性向上・賃上げを進めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>国補助金の活用支援</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">賃上げ</span><span class="keyword">生産性</span><span class="keyword">応援金</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/seisanseikoujou_chinginhikiage.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="仙台生産性ブースト補助金 国補助金の申請・活用や市内企業の生産性向上を後押しする制度。 生産性 補助金活用 設備 改善 国補助金の活用支援 補助金活用を通じて改善投資を進めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>仙台生産性ブースト補助金</h3>
+          </div>
+          <p class="summary">国補助金の申請・活用や市内企業の生産性向上を後押しする制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>補助金活用を通じて改善投資を進めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>国補助金の活用支援</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">生産性</span><span class="keyword">補助金活用</span><span class="keyword">設備</span><span class="keyword">改善</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/it_shienhojokin.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="終了" data-search="仙台ITベンダー助成金 ITベンダーによる支援を通じた補助金活用を後押ししていた制度。現在は終了案内ページ。 ITベンダー 終了 参考 国補助金の活用支援 参考情報">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status ended">終了</span>
+            </div>
+            <h3>仙台ITベンダー助成金</h3>
+          </div>
+          <p class="summary">ITベンダーによる支援を通じた補助金活用を後押ししていた制度。現在は終了案内ページ。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>参考情報</dd></div>
+            <div><dt>カテゴリ</dt><dd>国補助金の活用支援</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">ITベンダー</span><span class="keyword">終了</span><span class="keyword">参考</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/bendarjyoseikinn.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="新事業・事業変革" class="category-section">
+        <div class="section-head">
+          <h2>新事業・事業変革</h2>
+          <p>3制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="仙台市中小企業チャレンジ補助金 新分野進出や新商品・新サービス等、中小企業の挑戦を支える補助金。 新事業 新商品 新サービス 挑戦 新事業・事業変革 新しい取り組みを始めたい中小企業向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>仙台市中小企業チャレンジ補助金</h3>
+          </div>
+          <p class="summary">新分野進出や新商品・新サービス等、中小企業の挑戦を支える補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>新しい取り組みを始めたい中小企業向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>新事業・事業変革</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">新事業</span><span class="keyword">新商品</span><span class="keyword">新サービス</span><span class="keyword">挑戦</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/challengehojokin/jigyougaiyou.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="国" data-status="国制度案内" data-search="事業再構築補助金 事業再構築や業態転換など、大きな事業変革を支援する国の補助金。 事業再構築 業態転換 国補助金 新事業・事業変革 事業再編・新分野展開を図る事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>事業再構築補助金</h3>
+          </div>
+          <p class="summary">事業再構築や業態転換など、大きな事業変革を支援する国の補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>事業再編・新分野展開を図る事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>新事業・事業変革</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">事業再構築</span><span class="keyword">業態転換</span><span class="keyword">国補助金</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/hojokinkakutoku.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="令和7年度ページ" data-search="仙台市地域企業スケールアップ補助金 新事業展開、生産性向上、高付加価値化、販路開拓、ブランディング等を支援。 スケールアップ 高付加価値化 販路開拓 ブランディング 新事業・事業変革 成長投資を行う市内企業向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">令和7年度ページ</span>
+            </div>
+            <h3>仙台市地域企業スケールアップ補助金</h3>
+          </div>
+          <p class="summary">新事業展開、生産性向上、高付加価値化、販路開拓、ブランディング等を支援。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>成長投資を行う市内企業向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>新事業・事業変革</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">スケールアップ</span><span class="keyword">高付加価値化</span><span class="keyword">販路開拓</span><span class="keyword">ブランディング</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/scaleup/r7.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="設備投資・省力化" class="category-section">
+        <div class="section-head">
+          <h2>設備投資・省力化</h2>
+          <p>3制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="国" data-status="国制度案内" data-search="ものづくり補助金 設備投資や新製品・新サービス開発を支える代表的な国補助金。 設備投資 ものづくり 開発 設備投資・省力化 製造業・サービス業等の設備投資を行う事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>ものづくり補助金</h3>
+          </div>
+          <p class="summary">設備投資や新製品・新サービス開発を支える代表的な国補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>製造業・サービス業等の設備投資を行う事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>設備投資・省力化</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">設備投資</span><span class="keyword">ものづくり</span><span class="keyword">開発</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/monodukurihojokin.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="国" data-status="国制度案内" data-search="業務改善助成金 事業場内最低賃金の引上げと設備投資等を組み合わせて支援する制度。 業務改善 賃上げ 設備投資 設備投資・省力化 賃上げと業務改善を同時に進めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>業務改善助成金</h3>
+          </div>
+          <p class="summary">事業場内最低賃金の引上げと設備投資等を組み合わせて支援する制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>賃上げと業務改善を同時に進めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>設備投資・省力化</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">業務改善</span><span class="keyword">賃上げ</span><span class="keyword">設備投資</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/gyoumukaizenjoseikin/gyoumukaizenjoseikintop.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="国" data-status="国制度案内" data-search="中小企業省力化投資補助金 人手不足対策や省力化投資を支援する国の補助金。 省力化 自動化 人手不足 設備投資・省力化 省人化・自動化を進めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>中小企業省力化投資補助金</h3>
+          </div>
+          <p class="summary">人手不足対策や省力化投資を支援する国の補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>省人化・自動化を進めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>設備投資・省力化</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">省力化</span><span class="keyword">自動化</span><span class="keyword">人手不足</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/syouryokuka.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="賃上げ・雇用" class="category-section">
+        <div class="section-head">
+          <h2>賃上げ・雇用</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="賃上げドライブ補助金（仙台市設備投資促進補助金） 賃上げと設備投資を後押しする仙台市の補助制度。 賃上げ 設備投資 仙台市 賃上げ・雇用 賃上げと投資を連動させたい市内事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>賃上げドライブ補助金（仙台市設備投資促進補助金）</h3>
+          </div>
+          <p class="summary">賃上げと設備投資を後押しする仙台市の補助制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>賃上げと投資を連動させたい市内事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>賃上げ・雇用</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">賃上げ</span><span class="keyword">設備投資</span><span class="keyword">仙台市</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/setubitousisokusin.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="人材育成" class="category-section">
+        <div class="section-head">
+          <h2>人材育成</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="国" data-status="国制度案内" data-search="人材開発支援助成金 従業員の訓練・研修・リスキリング等に活用できる助成金。 研修 リスキリング 人材育成 人材育成 教育訓練を行う事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>人材開発支援助成金</h3>
+          </div>
+          <p class="summary">従業員の訓練・研修・リスキリング等に活用できる助成金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>教育訓練を行う事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>人材育成</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">研修</span><span class="keyword">リスキリング</span><span class="keyword">人材育成</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/jinzaikaihatsushienjoseikin/jinzaikaihatsushienjoseikintop.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="販路開拓" class="category-section">
+        <div class="section-head">
+          <h2>販路開拓</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="国" data-status="国制度案内" data-search="小規模事業者持続化補助金 販路開拓や業務効率化の小規模な投資に使いやすい国の補助金。 持続化 販路開拓 小規模 販路開拓 小規模事業者・個人事業主向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>小規模事業者持続化補助金</h3>
+          </div>
+          <p class="summary">販路開拓や業務効率化の小規模な投資に使いやすい国の補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>小規模事業者・個人事業主向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>販路開拓</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">持続化</span><span class="keyword">販路開拓</span><span class="keyword">小規模</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/jizokukahojokin/jizokukahojokintop.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="デジタル化・IT" class="category-section">
+        <div class="section-head">
+          <h2>デジタル化・IT</h2>
+          <p>4制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="仙台市業務効率化支援事業補助金（業務効率化サポート枠） 業務フロー改善やIT活用による効率化を支援する仙台市制度。 業務効率化 IT DX デジタル化・IT バックオフィスや現場の効率化を進めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>仙台市業務効率化支援事業補助金（業務効率化サポート枠）</h3>
+          </div>
+          <p class="summary">業務フロー改善やIT活用による効率化を支援する仙台市制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>バックオフィスや現場の効率化を進めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>デジタル化・IT</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">業務効率化</span><span class="keyword">IT</span><span class="keyword">DX</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/gyoumukouritukashien.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="追加募集ページ" data-search="仙台市地域企業業務効率化サポート補助金 地域企業のデジタル化や業務効率化を進めるための補助制度。 業務効率化 地域企業 DX デジタル化・IT 地域企業の業務改善・DX推進向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">追加募集ページ</span>
+            </div>
+            <h3>仙台市地域企業業務効率化サポート補助金</h3>
+          </div>
+          <p class="summary">地域企業のデジタル化や業務効率化を進めるための補助制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>地域企業の業務改善・DX推進向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>デジタル化・IT</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">業務効率化</span><span class="keyword">地域企業</span><span class="keyword">DX</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/gyoumukourituka.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="国" data-status="国制度案内" data-search="IT導入補助金 会計・受発注・顧客管理など、ITツール導入を支援する国の補助金。 IT導入 ソフトウェア DX デジタル化・IT ソフトウェア導入や業務デジタル化を進めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>IT導入補助金</h3>
+          </div>
+          <p class="summary">会計・受発注・顧客管理など、ITツール導入を支援する国の補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>ソフトウェア導入や業務デジタル化を進めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>デジタル化・IT</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">IT導入</span><span class="keyword">ソフトウェア</span><span class="keyword">DX</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/ithojokinkakutoku.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="情報系資格取得支援補助金 ITパスポート等の情報系資格取得にかかる経費を支援し、デジタル人材育成を後押し。 ITパスポート 資格取得 人材育成 デジタル化・IT 従業員のIT基礎力を高めたい事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>情報系資格取得支援補助金</h3>
+          </div>
+          <p class="summary">ITパスポート等の情報系資格取得にかかる経費を支援し、デジタル人材育成を後押し。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>従業員のIT基礎力を高めたい事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>デジタル化・IT</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">ITパスポート</span><span class="keyword">資格取得</span><span class="keyword">人材育成</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/jouhoukeisikakusyutoku.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="事業承継" class="category-section">
+        <div class="section-head">
+          <h2>事業承継</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="国" data-status="国制度案内" data-search="事業承継・引き継ぎ補助金 事業承継やM&A、経営資源の引継ぎに伴う取り組みを支援する補助金。 事業承継 引継ぎ M&A 事業承継 承継・引継ぎを進める事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type national">国</span>
+              <span class="badge badge-status note">国制度案内</span>
+            </div>
+            <h3>事業承継・引き継ぎ補助金</h3>
+          </div>
+          <p class="summary">事業承継やM&A、経営資源の引継ぎに伴う取り組みを支援する補助金。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>承継・引継ぎを進める事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>事業承継</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">事業承継</span><span class="keyword">引継ぎ</span><span class="keyword">M&A</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/jigyosyokei_hikitugihojokin.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="財務・資金繰り" class="category-section">
+        <div class="section-head">
+          <h2>財務・資金繰り</h2>
+          <p>2制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="終了" data-search="新型コロナウイルス感染症対策資本性劣後ローン連動型給付金 資本性劣後ローンの活用と連動した給付金。現在は受付終了。 資本性ローン 終了 資金繰り 財務・資金繰り 参考情報">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status ended">終了</span>
+            </div>
+            <h3>新型コロナウイルス感染症対策資本性劣後ローン連動型給付金</h3>
+          </div>
+          <p class="summary">資本性劣後ローンの活用と連動した給付金。現在は受付終了。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>参考情報</dd></div>
+            <div><dt>カテゴリ</dt><dd>財務・資金繰り</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">資本性ローン</span><span class="keyword">終了</span><span class="keyword">資金繰り</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/shihonseikyufu.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="終了" data-search="資本性ローン連動型給付金 資本性ローンと連動した支援制度。現在は申請受付終了。 資本性ローン 終了 給付金 財務・資金繰り 参考情報">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status ended">終了</span>
+            </div>
+            <h3>資本性ローン連動型給付金</h3>
+          </div>
+          <p class="summary">資本性ローンと連動した支援制度。現在は申請受付終了。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>参考情報</dd></div>
+            <div><dt>カテゴリ</dt><dd>財務・資金繰り</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">資本性ローン</span><span class="keyword">終了</span><span class="keyword">給付金</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/chusyokigyoshien/retdugo.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="GX・脱炭素" class="category-section">
+        <div class="section-head">
+          <h2>GX・脱炭素</h2>
+          <p>2制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="終了" data-search="GX関連融資に係る国の利子補給事業連動型給付金 GX関連の融資と連動する支援制度。現在は申請受付終了。 GX 脱炭素 終了 GX・脱炭素 参考情報">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status ended">終了</span>
+            </div>
+            <h3>GX関連融資に係る国の利子補給事業連動型給付金</h3>
+          </div>
+          <p class="summary">GX関連の融資と連動する支援制度。現在は申請受付終了。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>参考情報</dd></div>
+            <div><dt>カテゴリ</dt><dd>GX・脱炭素</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">GX</span><span class="keyword">脱炭素</span><span class="keyword">終了</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/gxkyufu.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="事業用太陽光パネル等の共同購入事業 太陽光設備等の導入負担を下げるため、共同購入の仕組みを案内する事業。 太陽光 共同購入 脱炭素 GX・脱炭素 事業用太陽光の導入を検討する事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>事業用太陽光パネル等の共同購入事業</h3>
+          </div>
+          <p class="summary">太陽光設備等の導入負担を下げるため、共同購入の仕組みを案内する事業。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>事業用太陽光の導入を検討する事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>GX・脱炭素</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">太陽光</span><span class="keyword">共同購入</span><span class="keyword">脱炭素</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kankyo/energyjiritsu/jigyoukyoudou.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="経営環境対応" class="category-section">
+        <div class="section-head">
+          <h2>経営環境対応</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="制度案内" data-search="経営環境変化対応資金連動型給付金 経営環境の変化に対応するための融資等と連動した支援制度。 経営環境 資金繰り 給付金 経営環境対応 資金繰りや経営環境変化への対応が必要な事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">制度案内</span>
+            </div>
+            <h3>経営環境変化対応資金連動型給付金</h3>
+          </div>
+          <p class="summary">経営環境の変化に対応するための融資等と連動した支援制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>資金繰りや経営環境変化への対応が必要な事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>経営環境対応</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">経営環境</span><span class="keyword">資金繰り</span><span class="keyword">給付金</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kikakushien/chusyokigyoshien/keieikankyouhenkakyuhukin.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      <section id="人事・両立支援" class="category-section">
+        <div class="section-head">
+          <h2>人事・両立支援</h2>
+          <p>1制度</p>
+        </div>
+        <div class="card-grid">
+          
+        <article class="card" data-type="仙台市" data-status="令和8年度" data-search="仙台市男性育休取得奨励金 男性の育児休業取得を促進するための奨励金制度。 男性育休 両立支援 奨励金 人事・両立支援 両立支援を進める事業者向け">
+          <div class="card-top">
+            <div class="badges">
+              <span class="badge badge-type municipal">仙台市</span>
+              <span class="badge badge-status note">令和8年度</span>
+            </div>
+            <h3>仙台市男性育休取得奨励金</h3>
+          </div>
+          <p class="summary">男性の育児休業取得を促進するための奨励金制度。</p>
+          <dl class="meta">
+            <div><dt>想定する相談</dt><dd>両立支援を進める事業者向け</dd></div>
+            <div><dt>カテゴリ</dt><dd>人事・両立支援</dd></div>
+          </dl>
+          <div class="keywords-wrap"><span class="keyword">男性育休</span><span class="keyword">両立支援</span><span class="keyword">奨励金</span></div>
+          <div class="actions">
+            <a class="button" href="https://www.city.sendai.jp/kodomo-somu/kurashi/kenkotofukushi/kosodate/ryoritsushien/danseiikukyu.html" target="_blank" rel="noopener noreferrer">公式ページを見る</a>
+          </div>
+        </article>
+        
+        </div>
+      </section>
+    
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>あわせて見たい情報</h2>
+            <p>制度そのものだけでなく、活用事例やセミナー情報も相談導線として有効です。</p>
+          </div>
+        </div>
+        <div class="related-grid">
+          <article class="related-card"><h3>事業に役立つ！！補助金活用術（補助金活用事例集）</h3><p>制度選びの前に、活用事例や申請の勘所を確認したい方向け。</p><a href="https://www.city.sendai.jp/kikakushien/jigyosha/kezai/hojokin/index.html" target="_blank" rel="noopener noreferrer">元ページから確認</a></article><article class="related-card"><h3>事業再構築チャレンジセミナー</h3><p>新事業展開系の制度を検討する前の情報収集に。</p><a href="https://www.city.sendai.jp/kikakushien/jigyosha/kezai/hojokin/index.html" target="_blank" rel="noopener noreferrer">元ページから確認</a></article><article class="related-card"><h3>小規模事業者持続化補助金 獲得セミナー</h3><p>販路開拓系の国補助金を初めて検討する方向け。</p><a href="https://www.city.sendai.jp/kikakushien/jigyosha/kezai/hojokin/index.html" target="_blank" rel="noopener noreferrer">元ページから確認</a></article><article class="related-card"><h3>事業再構築補助金 獲得セミナー</h3><p>事業再構築の考え方や申請準備の参考に。</p><a href="https://www.city.sendai.jp/kikakushien/jigyosha/kezai/hojokin/index.html" target="_blank" rel="noopener noreferrer">元ページから確認</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-panel">
+        <h2>掲載にあたっての注意</h2>
+        <p>このページは、仙台市公式サイトの掲載制度を紹介しやすい形に再構成したものです。制度の適用可否、最新の公募状況、申請方法、要綱、必要書類は必ず各公式ページで確認してください。</p>
+        <p class="fine">ベースページ: 仙台市「支援金・補助金を獲得したい」 / HP掲載用の二次整理版</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.card');
+    const searchInput = document.getElementById('searchInput');
+    const resultCount = document.getElementById('resultCount');
+    let activeFilter = 'all';
+
+    function updateCards() {
+      const q = (searchInput.value || '').trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach(card => {
+        const hay = card.dataset.search.toLowerCase();
+        const type = card.dataset.type;
+        const status = card.dataset.status;
+
+        const filterOk =
+          activeFilter === 'all' ||
+          (activeFilter === '仙台市' && type === '仙台市') ||
+          (activeFilter === '国' && type === '国') ||
+          (activeFilter === '終了' && status === '終了');
+
+        const searchOk = !q || hay.includes(q);
+        const show = filterOk && searchOk;
+        card.classList.toggle('hidden', !show);
+        if (show) visible += 1;
+      });
+
+      document.querySelectorAll('.category-section').forEach(section => {
+        const hasVisible = section.querySelector('.card:not(.hidden)');
+        section.classList.toggle('hidden', !hasVisible);
+      });
+
+      resultCount.textContent = `${visible}件を表示中`;
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeFilter = chip.dataset.filter;
+        updateCards();
+      });
+    });
+
+    searchInput.addEventListener('input', updateCards);
+    updateCards();
+  </script>
+</body>
+</html>
